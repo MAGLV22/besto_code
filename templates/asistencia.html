@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://tailwindcss.com"></script>
+    <title>Asistencias</title>
+  </head>
+  <body>
+    <table class="table-auto">
+      <thead>
+        <tr>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>C.I.</th>
+          <th>Asistencia</th>
+          <th>Grado</th>
+          <th>Justificativo</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for asistencia in lista_asistencia %}
+        <tr>
+          <td>{{ asistencia.apellido }}</td>
+          <td>{{ asistencia.nombre }}</td>
+          <td>{{ asistencia.ci }}</td>
+          <td>{{ asistencia.asistencia }}</td>
+          <!--<input
+              onclick="this.value=1-this.value"
+              type="checkbox"
+              value="0"
+            />-->
+
+          <td>{{ asistencia.grado }}</td>
+          <td>{{ asistencia.justificativo }}</td>
+          <td>{{ asistencia.fecha }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
